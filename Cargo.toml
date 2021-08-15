@@ -1,0 +1,23 @@
+[package]
+name = "todo-ipc"
+version = "0.1.0"
+authors = ["mosm <airman515@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+anyhow = "1.0.42"
+bincode = "1.3.3"
+futures = "0.3.16"
+parity-tokio-ipc = "0.9.0"
+serde = { version = "1.0.127", features = ["derive"] }
+structopt = "0.3.22"
+thiserror = "1.0.26"
+tokio = { version = "1.9.0", features = ["full"] }
